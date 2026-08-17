@@ -15,6 +15,7 @@ public class OrdersService {
 //    @Autowired
     OrdersService(PaymentService paymentService) {
         this.paymentService = paymentService;
+        System.out.println("Orders service created");
     }
 
     public void placeOrder() {
