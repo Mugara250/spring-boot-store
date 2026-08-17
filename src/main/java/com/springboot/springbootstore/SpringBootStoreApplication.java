@@ -10,6 +10,7 @@ public class SpringBootStoreApplication {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(SpringBootStoreApplication.class, args);
         OrdersService ordersService = context.getBean(OrdersService.class);
+        OrdersService ordersService1 = context.getBean(OrdersService.class);
 //        ordersService.setPaymentService(new PayPalPaymentService());
         ordersService.placeOrder();
 //        NotificationManager notificationManager = context.getBean(NotificationManager.class);
