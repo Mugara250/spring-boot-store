@@ -12,6 +12,8 @@ public class SpringBootStoreApplication {
         OrdersService ordersService = context.getBean(OrdersService.class);
 //        ordersService.setPaymentService(new PayPalPaymentService());
         ordersService.placeOrder();
+        NotificationManager notificationManager = context.getBean(NotificationManager.class);
+        notificationManager.sendNotification("Hello, you have a new notification");
     }
 
 }
