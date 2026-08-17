@@ -1,8 +1,13 @@
 package com.springboot.springbootstore;
 
 public class OrdersService {
+    PaymentService paymentService;
+
+    OrdersService(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
+
     public void placeOrder() {
-        var payment = new StripePaymentService();
-        payment.processPayment(100);
+        paymentService.processPayment(100);
     }
 }
