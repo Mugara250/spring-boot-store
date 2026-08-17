@@ -9,16 +9,16 @@ import java.util.List;
 @Service("stripe")
 @Primary
 public class StripePaymentService implements PaymentService{
-    @Value("${stripe-apiUrl}")
+    @Value("${stripe.apiUrl}")
     private String apiUrl;
 
-    @Value("${stripe-timeout:3000}")
+    @Value("${stripe.timeout:3000}")
     private String timeout;
 
-    @Value("${stripe-enabled}")
+    @Value("${stripe.enabled}")
     private boolean enabled;
 
-    @Value("${stripe-supported-currencies}")
+    @Value("${stripe.supported-currencies}")
     private List<String> supportedCurrencies;
 
     public void processPayment(double amount) {
