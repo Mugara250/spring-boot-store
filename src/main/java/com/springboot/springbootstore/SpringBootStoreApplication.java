@@ -8,7 +8,8 @@ public class SpringBootStoreApplication {
 
     public static void main(String[] args) {
 //        SpringApplication.run(SpringBootStoreApplication.class, args);
-        OrdersService ordersService = new OrdersService(new PayPalPaymentService());
+        OrdersService ordersService = new OrdersService();
+        ordersService.setPaymentService(new PayPalPaymentService());
         ordersService.placeOrder();
     }
 
