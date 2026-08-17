@@ -7,16 +7,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+//@Service
 public class OrdersService {
     private PaymentService paymentService;
 
 
-    public OrdersService() {
-    }
-
-    @Autowired
-    OrdersService(@Qualifier("stripe") PaymentService paymentService) {
+//    @Autowired
+    OrdersService(PaymentService paymentService) {
         this.paymentService = paymentService;
     }
 
