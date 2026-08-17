@@ -1,5 +1,7 @@
 package com.springboot.springbootstore;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,7 +24,17 @@ public class OrdersService {
         paymentService.processPayment(100);
     }
 
-    public void setPaymentService(PaymentService paymentService) {
-        this.paymentService = paymentService;
+    @PostConstruct
+    public void init() {
+        System.out.println("OrderService PostConstruct");
     }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("OrderService PreDestroy");
+    }
+//
+//    public void setPaymentService(PaymentService paymentService) {
+//        this.paymentService = paymentService;
+//    }
 }

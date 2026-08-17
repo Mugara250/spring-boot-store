@@ -22,7 +22,7 @@ public class AppConfig {
     }
 
     @Bean
-    @Scope("prototype")
+//    @Scope("prototype")
     public OrdersService ordersService() {
         return paymentGateway.equalsIgnoreCase("stripe") ? new OrdersService(stripePaymentService()) : new OrdersService(payPalPaymentService());
     }
