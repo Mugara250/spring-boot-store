@@ -8,3 +8,6 @@ stripe:
   timeout: 1000
   enabled: true
   supported-currencies: USD,EUR,GBP
+email:
+  host: smtp.example.com
+  port: 587

@@ -1,4 +1,4 @@
-package com.springboot.springbootstore;
+package com.springboot.springbootstore.notificationservice;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
